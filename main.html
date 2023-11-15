@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--Bootstrap cdn-->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/lumen/bootstrap.min.css"> -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/pulse/bootstrap.min.css"> -->
+    <title>HANGMAN</title>
+</head>
+<body>
+    <script type="module" src="./hangman.js" ></script>
+    
+    <div class="container">
+        <h1 class="text-center">Hangman</h1>
+        <img id="hangmanPic" src ="images/hang.jpg">
+        <div class="float-right">Wrong Guesses:<span id="mistakes">0</span> of <span id="maxWrong"></span>
+            <div class="text-center">
+                <p>GUESS THE WORD</p>
+            <p id="wordSpotlight">write the guess word</p></div>
+           
+            <div id="keyboard"></div>
+        <button class="btn btn-info" onclick="reset()">Reset</button>
+        </div>
+    </div>
+</body>
+</html>
