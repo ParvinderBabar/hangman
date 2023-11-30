@@ -1,0 +1,74 @@
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: cadetblue;
+    color: var(--pink);
+
+}
+
+.container {
+
+    background-color: cadetblue;
+}
+
+.container h1 {
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 5rem;
+    font-weight: 800;
+    text-align: center;
+    margin: 10px;
+    margin-left: 20%;
+    text-decoration: underline;
+    width: 20%;
+}
+
+h6 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#instructions {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1rem;
+    font-weight: 100;
+    margin: 10px;
+
+}
+
+#keyboard button {
+
+    color: black;
+    width: 20px;
+    text-align: center;
+    margin: 10px;
+    padding: 2%;
+}
+
+#reset {
+    color: black;
+    padding: 50px 50px;
+    font-size: 2.25rem;
+    font-weight: 800;
+    text-align: center;
+    margin: 10px;
+    margin-left: 20%;
+}
+
+.wrongGuess,
+.guessWord p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    font-weight: 100;
+    margin: 10px;
+}
+
+#wrongWords,
+#wordSpotlight {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    ;
+    font-size: 2rem;
+    font-weight: 100;
+    margin: 10px;
+}
