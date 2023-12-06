@@ -2,8 +2,8 @@ import wordBank from './word-bank.js';
 
 let answer = '';
 let maxWrong = 6;
-// let maxImages = 6;
-// let imagePath = '';
+let maxImages = 6;
+let imagePath = '';
 let mistakes = 0;
 let guessed = [];
 let wordStatus = null;
@@ -57,7 +57,8 @@ function generateButton() {
 console.log(choosenLetter, " doesnt exist in the word");
         mistakes++;
        
-            updateMistakes();
+        updateMistakes();
+        
             checkLostStatus();
         }
     
@@ -88,16 +89,27 @@ function checkLostStatus() {
 document.getElementById('maxWrong').innerHTML = maxWrong;
 let hangmanImage = document.querySelector('#hangmanImages');
 
-// STILL WORKING ON IT
-// function updateHangmanImages() {
+
+function updateHangmanImages() {
+    let imageNumber = mistakes + 1;
+   if (imageNumber<= 6) {
+      
+        const hangmanImage = document.getElementById("hangmanImg");
+        hangmanImage.src = `images/hangman_${imageNumber}.jpg`;
+    //    `hangman_${imageNumber}.jpg`;
+     
+   }
+   else {
+        console.log("Game Over: Maximum incorrect guesses reached!");
+    }
+}
+    
    
-//     let imageNumber = mistakes + 1;
-//     hangmanImage.src = `C:\Users\ishme\development\hangman\images\`hangman_${imageNumber}.jpg`;
-// }
-// }
+
+
     function updateMistakes() {
         document.querySelector('#mistakes').innerHTML = mistakes;
-        //  updateHangmanImages();
+          updateHangmanImages();
 }
 
 //once game finished,press reset button to start all over
@@ -129,10 +141,20 @@ randomWord();
 
  randomWord();// generate randdom word from wordBank 
     generateButton();
-    guessedWord();  
+guessedWord();  
+// const canvas = document.getElementById('hangmanCanvas');
+//     const draw = canvas.getContext('2d');
+// function drawHangman() {
+//     // Clear the canvas
+//     draw.clearRect(0, 0, canvas.width, canvas.height);
+
+//     // Draw base
+//     //     {
+    
+// }
 
 
   
-    
+// drawHangman();   
    
    

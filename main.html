@@ -7,21 +7,36 @@
     
    
  <title>HANGMAN</title>
+ 
 </head>
 <body>
     <script type="module" src="./hangman.js" ></script>
     
     <div class="container">
-        <h1>Hangman</h1>
         
+       <div class="hangmanBox">
+<h1>HANGMAN GAME</h1>
+<img id="HangmanImg" src="images/hangman_1.jpg" alt="hangman-img">
+
+
+       </div>
+        
+        <div class="guessBox">
+
+    <div class="guessWord">
+        <p>GUESS THE WORD</p>
+        <h4 class="hint">
+            Hint:hello, i will update hints later for my portfolio update as i add word-hint.js file.
+        </h4>
         <div class="wrongGuess">Wrong Guesses:<span id="mistakes">0</span> of
-             <span id="maxWrong"></span>
-       
-             <div class="guessWord">
-                <p>GUESS THE WORD</p>
-                <p id="wordSpotlight">Write the guess word</p>
-                <p id="wrongWords">Incorrect guessed words:</p>
-               </div>
+            <span id="maxWrong"></span>
+        <h4 id="wordSpotlight">Write the guess word</h4>
+        <h4 id="wrongWords">
+            Incorrect guessed words:
+        </h4>
+    </div>
+        </div>
+      
            
             <div id="keyboard"></div>
             <button id="reset">Reset</button>
