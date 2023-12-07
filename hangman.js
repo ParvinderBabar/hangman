@@ -66,21 +66,26 @@ console.log(choosenLetter, " doesnt exist in the word");
 function guessedWord() {
         wordStatus = answer.split('').map(letter =>
             (guessed.indexOf(letter) >= 0 ? letter : " _ ")).join('');
+    
         document.querySelector('#wordSpotlight').innerHTML = wordStatus;
         // console.log(`${guessed}`);
     }
 function checkWin() {
     // Check if the player won
     if (wordStatus === answer) {
-        console.log('Congratulations! You guessed the word: ' + answer);
-        document.querySelector('#keyboard').innerHTML = 'YOU WON THE GAME';   
+        const lost = document.querySelector("#win");
+        win.innerText ="ns! You Win the game" ;
+        document.querySelector('#keyboard').innerHTML = '';   
     }
 }
     //check if player lost the game
 function checkLostStatus() {
     if (mistakes === maxWrong) {
-    console.log('Sorry,You lost the game. The correct word was:'  + answer);
-    document.querySelector('#keyboard').innerHTML = ` Sorry, you ran out of guesses. The correct word was:  ${answer}`;
+        const lost = document.querySelector("#lost");
+        lost.innerText = `Sorry,You lost the game. The correct word was:${answer}`;
+      
+        // console.log('Sorry,You lost the game. The correct word was:'  + answer);
+     document.querySelector('#keyboard').innerHTML = "";
          }
 }
 
@@ -123,15 +128,19 @@ function updateHangmanImages() {
      document.querySelectorAll('#keyboard button').forEach(button => {
          button.disabled = false;
      });
-      document.querySelector('#wrongWords').innerText = '';
+  document.querySelector('#wrongWords').textContent = '';
     
-      document.querySelector('#keyboard').innerText = "";
+     document.querySelector('#keyboard').innerText = "";
+     document.querySelector("#lost").innerText = "";
+     document.querySelector("#win").innerText = "";
+     
      
 randomWord();
     generateButton();
      guessedWord(); 
      updateMistakes();
-
+     checkLostStatus();
+      
 }
  document.addEventListener('DOMContentLoaded', function () {
                
@@ -142,19 +151,5 @@ randomWord();
  randomWord();// generate randdom word from wordBank 
     generateButton();
 guessedWord();  
-// const canvas = document.getElementById('hangmanCanvas');
-//     const draw = canvas.getContext('2d');
-// function drawHangman() {
-//     // Clear the canvas
-//     draw.clearRect(0, 0, canvas.width, canvas.height);
 
-//     // Draw base
-//     //     {
-    
-// }
-
-
-  
-// drawHangman();   
-   
    
