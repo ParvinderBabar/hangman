@@ -13,32 +13,33 @@
     <script type="module" src="./hangman.js" ></script>
     
     <div class="container">
-        
-       <div class="hangmanBox">
-<h1>HANGMAN GAME</h1>
-<img id="HangmanImg" src="images/hangman_1.jpg" alt="hangman-img">
-
-
-       </div>
+        <h1>HANGMAN GAME</h1>
         
         <div class="guessBox">
+            <!-- <span id="hint">
+                Hint:hello, i will update hints later for my portfolio update as i add word-hint.js file.
+            </span> -->
 
+        <img id="HangmanImg" src="images/hangman_0.jpg" alt="hangman-img">
+        <div class="wrongGuess">Wrong Guesses:<span  id="mistakes" style="color: red;">0</span> of
+        <span id="maxWrong"></span>
     <div class="guessWord">
-        <p>GUESS THE WORD</p>
-        <h4 class="hint">
-            Hint:hello, i will update hints later for my portfolio update as i add word-hint.js file.
-        </h4>
-        <div class="wrongGuess">Wrong Guesses:<span id="mistakes">0</span> of
-            <span id="maxWrong"></span>
-        <h4 id="wordSpotlight">Write the guess word</h4>
-        <h4 id="wrongWords">
-            Incorrect guessed words:
-        </h4>
+        <h4>GUESS THE WORD</h4>
+        <p id="wordSpotlight">Write the guess word</p>
+
+            <h4>Incorrect guessed words:</h4>
+            <h4 id="wrongWords"></h4> 
+            <h4 id="lost"></h4>
+            <h4 id="win"></h4>
     </div>
+    
+   
         </div>
       
            
-            <div id="keyboard"></div>
+            <div id="keyboard">
+              
+            </div>
             <button id="reset">Reset</button>
             </div>
     </div>

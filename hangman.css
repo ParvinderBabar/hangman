@@ -97,6 +97,7 @@ button:disabled {
 #wrongWords {
     margin-top: 10px;
     font-weight: bold;
+    color: red;
 }
 
 #maxWrong {

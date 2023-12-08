@@ -74,7 +74,7 @@ function checkWin() {
     // Check if the player won
     if (wordStatus === answer) {
         const lost = document.querySelector("#win");
-        win.innerText ="ns! You Win the game" ;
+        win.innerText ="Congratulations! You Win the game" ;
         document.querySelector('#keyboard').innerHTML = '';   
     }
 }
@@ -88,30 +88,24 @@ function checkLostStatus() {
      document.querySelector('#keyboard').innerHTML = "";
          }
 }
-
-
-
 document.getElementById('maxWrong').innerHTML = maxWrong;
-let hangmanImage = document.querySelector('#hangmanImages');
 
-
+//created images with Paint Brush
 function updateHangmanImages() {
-    let imageNumber = mistakes + 1;
+    let imageNumber = mistakes;
    if (imageNumber<= 6) {
       
-        const hangmanImage = document.getElementById("hangmanImg");
+       const hangmanImage = document.querySelector("#HangmanImg");
+       console.log( hangmanImage);
+        console.log("Image Number:", imageNumber);
         hangmanImage.src = `images/hangman_${imageNumber}.jpg`;
-    //    `hangman_${imageNumber}.jpg`;
-     
+
    }
    else {
         console.log("Game Over: Maximum incorrect guesses reached!");
     }
 }
-    
-   
-
-
+  
     function updateMistakes() {
         document.querySelector('#mistakes').innerHTML = mistakes;
           updateHangmanImages();
@@ -135,21 +129,21 @@ function updateHangmanImages() {
      document.querySelector("#win").innerText = "";
      
      
-randomWord();
+    randomWord();
     generateButton();
-     guessedWord(); 
-     updateMistakes();
-     checkLostStatus();
+    guessedWord(); 
+    updateMistakes();
+    checkLostStatus();
       
 }
- document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', function () {
                
                 document.querySelector('#reset').onclick = reset;
             }
             ); 
 
- randomWord();// generate randdom word from wordBank 
+    randomWord();// generate randdom word from wordBank 
     generateButton();
-guessedWord();  
+    guessedWord();  
 
    
