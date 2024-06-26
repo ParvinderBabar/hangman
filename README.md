@@ -3,6 +3,8 @@ Welcome to the Hangman Game project! This project was created for the CanCode Co
 
 ## Overview
 Hangman is a word-guessing game where players try to guess a hidden word letter by letter. With each incorrect guess, a part of a stick figure is drawn. The objective is to guess the word before the stick figure is fully drawn to win the game.
+## Link
+https://hangman-eight-theta.vercel.app/
 
 ## Project Structure
 hangman/
